@@ -72,7 +72,8 @@ func (rpc *RPC) Call(result interface{}, method string, params ...interface{}) (
 
 	// would user info be included in the URL?
 	urlString := url.String()
-	// log.Println("rpc url", urlString)
+	log.Println("rpc url", urlString)
+        pretty.Println("rpc body", string(body))
 
 	req, err := http.NewRequest(http.MethodPost, urlString, &body)
 	if err != nil {
@@ -92,7 +93,7 @@ func (rpc *RPC) Call(result interface{}, method string, params ...interface{}) (
 	}
 	defer res.Body.Close()
 
-	// log.Println("rpc http status", res.Status)
+	 log.Println("rpc http status", res.Status)
 	if result == nil {
 		return
 	}
@@ -105,7 +106,7 @@ func (rpc *RPC) Call(result interface{}, method string, params ...interface{}) (
 	}
 
 	if res.StatusCode == 200 {
-		// pretty.Println("json rpc result:", string(jsonResult.RawResult))
+		pretty.Println("json rpc result:", string(jsonResult.RawResult))
 		json.Unmarshal(jsonResult.RawResult, result)
 		return
 	}
