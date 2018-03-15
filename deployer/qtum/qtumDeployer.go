@@ -71,7 +71,8 @@ func (d *Deployer) CreateContract(c *contract.CompiledContract, jsonParams []byt
 	var tx TransactionReceipt
 
 	args := []interface{}{
-		bin, gasLimit, 0.0000004,
+		//bin, gasLimit, 0.0000004000,
+		bin, gasLimit, 4000,
 	}
 
 	// fmt.Println("create contract args", args)
