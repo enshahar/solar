@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/pkg/errors"
-	"github.com/qtumproject/solar/contract"
+	"github.com/enshahar/solar/contract"
 )
 
 type rawCompilerOutput struct {

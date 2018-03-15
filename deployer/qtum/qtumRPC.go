@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/qtumproject/solar/contract"
+	"github.com/enshahar/solar/contract"
 )
 
 type jsonRPCRequest struct {

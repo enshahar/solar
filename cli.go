@@ -10,11 +10,11 @@ import (
 	"sync"
 
 	"github.com/pkg/errors"
-	"github.com/qtumproject/solar/contract"
-	"github.com/qtumproject/solar/deployer"
-	"github.com/qtumproject/solar/deployer/eth"
-	"github.com/qtumproject/solar/deployer/qtum"
-	"github.com/qtumproject/solar/varstr"
+	"github.com/enshahar/solar/contract"
+	"github.com/enshahar/solar/deployer"
+	"github.com/enshahar/solar/deployer/eth"
+	"github.com/enshahar/solar/deployer/qtum"
+	"github.com/enshahar/solar/varstr"
 	kingpin "gopkg.in/alecthomas/kingpin.v2"
 )
 
